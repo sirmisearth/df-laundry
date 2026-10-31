@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DF 018</title>
+<style>
+body{font-family:Arial;margin:0;background:#f4f8ff}
+header{background:#004aad;color:white;padding:20px 15px;text-align:center;position:relative}
+.menu-btn{position:absolute;top:15px;right:15px;font-size:28px;background:none;border:none;color:white;cursor:pointer}
+.dropdown{display:none;position:absolute;top:55px;right:10px;background:white;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.2);width:240px;z-index:10;text-align:left}
+.dropdown a{display:block;padding:14px;color:#004aad;text-decoration:none;font-weight:bold;font-size:14px}
+.fast-badge{background:#FFD700;color:#004aad;display:inline-block;padding:8px 18px;border-radius:20px;font-weight:bold;margin-top:10px;font-size:14px}
+.form-box{background:white;margin:15px;border-radius:15px;padding:20px;box-shadow:0 4px 15px rgba(0,0,0,0.1)}
+.promise{display:flex;justify-content:space-around;text-align:center;margin:15px 0;font-size:13px;color:#004aad;font-weight:bold}
+.promise div{background:#eef4ff;padding:10px;border-radius:10px;width:30%}
+input,select{width:100%;padding:14px;margin:8px 0 15px;border:1.5px solid #004aad;border-radius:10px;font-size:16px;box-sizing:border-box}
+label{font-weight:bold;color:#004aad}
+.order-btn{width:100%;background:#25D366;color:white;padding:18px;border:none;border-radius:30px;font-size:18px;font-weight:bold;cursor:pointer}
+</style>
+</head>
+<body>
+
+<header>
+<button class="menu-btn" onclick="toggleMenu()">⋮</button>
+<h1>DF Laundry Services</h1>
+<h2>DF 018 - Wash & Iron</h2>
+<div class="fast-badge">⚡ Delivered in 3HRS - Fastest in DF!</div>
+<div class="dropdown" id="dropdown">
+<a href="https://wa.me/254755407974?text=Hi,%20I%20saw%20DF%20Laundry%20DF%20018%20site.%20Please%20program%20one%20for%20me%20too%20🙏" target="_blank">📞 Call programmer of this site to program you one</a>
+</div>
+</header>
+
+<div class="form-box">
+<div class="promise">
+<div>🚚<br>Free Pickup</div>
+<div>⚡<br>3HRS Delivery</div>
+<div>👕<br>Clean & Ironed</div>
+</div>
+
+<h2 style="text-align:center;color:#004aad">Place Your Order</h2>
+
+<label>Your Full Name</label>
+<input type="text" id="name" placeholder="e.g. Jane">
+
+<label>Your Phone Number</label>
+<input type="tel" id="myphone" placeholder="07XXXXXXXX">
+
+<label>Service</label>
+<select id="service">
+<option>Wash and Iron</option>
+<option>Wash Only</option>
+<option>Iron Only</option>
+</select>
+
+<label>Block</label>
+<input type="text" id="block" placeholder="e.g. DF">
+
+<label>Floor</label>
+<input type="text" id="floor" placeholder="e.g. 2nd Floor">
+
+<label>House / Course Number</label>
+<input type="text" id="course" placeholder="e.g. 018">
+
+<button class="order-btn" onclick="sendOrder()">PLACE ORDER - WhatsApp</button>
+</div>
+
+<script>
+function toggleMenu(){
+let d=document.getElementById('dropdown');
+d.style.display = d.style.display==='block' ? 'none' : 'block';
+}
+function sendOrder(){
+let n=document.getElementById('name').value.trim();
+let p=document.getElementById('myphone').value.trim();
+let s=document.getElementById('service').value;
+let b=document.getElementById('block').value.trim();
+let f=document.getElementById('floor').value.trim();
+let c=document.getElementById('course').value.trim();
+if(n==''||p==''||b==''){alert('Fill Name, Phone, Block');return;}
+let msg=`*🧺 NEW ORDER - DF LAUNDRY DF 018*
+⚡ 3HRS DELIVERY
+
+👤 Customer: ${n}
+📱 Phone: ${p}
+🧼 Service: ${s}
+📍 Location: Block ${b}, Floor ${f}, House ${c}
+-----------------------------`;
+window.open(`https://wa.me/254755407974?text=${encodeURIComponent(msg)}`,'_blank');
+}
+window.onclick=function(e){if(!e.target.matches('.menu-btn')){document.getElementById('dropdown').style.display='none';}}
+</script>
+
+</body>
+</html>
+</body>
+
+</html>
